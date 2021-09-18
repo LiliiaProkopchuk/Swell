@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swell</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,11 +46,15 @@
                 >
               </li>
             </ul>
+            <div class="mobile__login">
+              <a href="#" class="menu__link">Start free trial</a>
+              <a href="#popup" class="menu__link header__btn popup-link">Log in</a>
+            </div>
           </nav>
         </div>
-        <div class="log-in">
+        <div class="pc__login">
           <a href="#" class="menu__link">Start free trial</a>
-          <a href="#" class="menu__link header__btn">Log in</a>
+          <a href="#popup" class="menu__link header__btn popup-link">Log in</a>
         </div>
       </div>
     </header>
@@ -78,12 +84,10 @@
           </div>
           <div class="made firstscreen__case">
             <div class="case__img">
-              <img
-                data-src="images/made.png"
-                src="images/1x1.png"
-                alt="Made picture"
-                style="width: 401px; height: 339px"
-              />
+              <picture>
+                <source data-srcset="images/made-250.png" srcset="images/1x1.png" alt="Made picture" media="(max-width: 900px)">
+                <img data-src="images/made.png" src="images/1x1.png" alt="Made picture">
+               </picture>
             </div>
             <div class="case__box">
               <div class="case__title">Made for growth</div>
@@ -111,12 +115,10 @@
               </div>
             </div>
             <div class="case__img">
-              <img
-                data-src="images/commerce.png"
-                src="images/1x1.png"
-                alt="Commerce picture"
-                style="width: 331px; height: 365px"
-              />
+              <picture>
+                <source data-srcset="images/commerce-250.png" srcset="images/1x1.png" alt="Commerce picture" media="(max-width: 900px)">
+                <img dats-src="images/commerce.png" src="images/1x1.png" alt="Commerce picture">
+               </picture>
             </div>
           </div>
         </div>
@@ -153,16 +155,16 @@
               <tr>
                 <th class="table__text"></th>
                 <th>
-                  <img src="images/table_logo-1.png" alt="Logo" />
+                  <img class="table__logo" src="images/table_logo-1.png" alt="Logo" />
                 </th>
                 <th>
-                  <img src="images/table_logo-2.png" alt="Logo" />
+                  <img class="table__logo" src="images/table_logo-2.png" alt="Logo" />
                 </th>
                 <th>
-                  <img src="images/table_logo-3.png" alt="Logo" />
+                  <img class="table__logo" src="images/table_logo-3.png" alt="Logo" />
                 </th>
                 <th>
-                  <img src="images/table_logo-4.png" alt="Logo" />
+                  <img class="table__logo" src="images/table_logo-4.png" alt="Logo" />
                 </th>
               </tr>
             </thead>
@@ -229,22 +231,37 @@
           <div class="resources__case">
             <ul class="resources__list">
               <li class="resources__unit unit__review-1">
-                <img data-src="images/resources_img-1.jpg" src="images/1x1.png" alt="Image" class="resources__img" />
-                <img src="images/resources_logo-1.png" alt="Logo" class="resources__logo" />
-                <div class="resources__review">A modern and elegant website, designed by BCMH</div>
-                <div class="resources__author">Soon the Sun</div>
+                <picture class="resources__img">
+                  <source data-srcset="images/resources_img-1_200.jpg" srcset="images/1x1.png" alt="Image" media="(max-width: 500px)">
+                  <img data-src="images/resources_img-1.jpg" src="images/1x1.png" alt="Image" />
+                </picture>
+                <div class="resources__comment">
+                  <img src="images/resources_logo-1.png" alt="Logo" class="resources__logo" />
+                  <div class="resources__review">A modern and elegant website, designed by BCMH</div>
+                  <div class="resources__author">Soon the Sun</div>
+                </div>
               </li>
               <li class="resources__unit unit__review-2">
-                <img src="images/resources_logo-2.png" alt="Logo" class="resources__logo" />
-                <div class="resources__review">“Swell has been like a spring for Spinn, allowing us to efficiently grow and scale.”</div>
-                <div class="resources__author">Roderick de Rode <br> Spinn Coffee</div>
-                <img data-src="images/resources_img-2.jpg" src="images/1x1.png" alt="Image" class="resources__img" />
+                <div class="resources__comment">
+                  <img src="images/resources_logo-2.png" alt="Logo" class="resources__logo" />
+                  <div class="resources__review">“Swell has been like a spring for Spinn, allowing us to efficiently grow and scale.”</div>
+                  <div class="resources__author">Roderick de Rode <br> Spinn Coffee</div>
+                </div>
+                <picture class="resources__img">
+                  <source data-srcset="images/resources_img-2_200.jpg" srcset="images/1x1.png" alt="Image" media="(max-width: 500px)">
+                  <img data-src="images/resources_img-2.jpg" src="images/1x1.png" alt="Image" />
+                </picture>
               </li>
               <li class="resources__unit unit__review-3">
-                <img data-src="images/resources_img-3.jpg" src="images/1x1.png" alt="Image" class="resources__img" />
-                <img src="images/resources_logo-3.png" alt="Logo" class="resources__logo" />
-                <div class="resources__review">“Magento is expensive. Shopify is limiting. Moltin isn’t there yet. There are a lot of options but none of them are great.”</div>
-                <div class="resources__author">Ryan Bonifacino <br> Great Heights</div>
+                <picture class="resources__img">
+                  <source data-srcset="images/resources_img-3_200.jpg" srcset="images/1x1.png" alt="Image" media="(max-width: 500px)">
+                  <img data-src="images/resources_img-3.jpg" src="images/1x1.png" alt="Image" />
+                </picture>
+                <div class="resources__comment">
+                  <img src="images/resources_logo-3.png" alt="Logo" class="resources__logo" />
+                  <div class="resources__review">“Magento is expensive. Shopify is limiting. Moltin isn’t there yet. There are a lot of options but none of them are great.”</div>
+                  <div class="resources__author">Ryan Bonifacino <br> Great Heights</div>
+                </div>
               </li>
             </ul>
           </div>
@@ -316,6 +333,21 @@
             </ul>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__body">
+          <div class="popup__content">
+              <a href="#" class="popup__close close-popup"><img src="images/cross-close-svgrepo-com.svg" alt="Close"></a>
+              <div class="popup__title">Ваши данные</div>
+              <form action="" method="POST" class="popup__form">
+                  <input type="text" name="name" placeholder="Ваше имя">
+                  <input type="password" name="password" placeholder="Пароль">
+                  <button class="popup__btn" type="submit">Войти</button>
+              </form>
+          </div>
+      </div>
+  </div>
+
     <script src="js/main.min.js"></script>
   </body>
 </html>
